@@ -69,6 +69,44 @@ import Layout from "../layouts/main.astro";
     </div>
   </div>
 
-  <Separator text="Check out my projects" />
+  <Separator text="Algunos de mis proyectos" />
   <Projects />
+  <Separator text="Mi contacto" />
+  ---
+import Layout from "../layouts/main.astro";
+---
+
+<Layout>
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres colaborar? ¡No dudes en contactarme!</p>
+
+        <form class="contact-form" action="/submit-form" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+
+        <div class="social-links">
+            <p>También puedes encontrarme en:</p>
+            <ul>
+                <li><a href="https://linkedin.com/tu-perfil" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/tu-perfil" target="_blank">GitHub</a></li>
+                <li><a href="mailto:tu-email@example.com">Email</a></li>
+            </ul>
+        </div>
+    </section>
 </Layout>
